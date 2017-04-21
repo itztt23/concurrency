@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{url}
+\usepackage{hyperref}
 
 \usepackage{graphicx} %package to manage images
 \graphicspath{ {images/} }
@@ -57,7 +58,7 @@
 
 \begin{titlepage}
 \title{Project 1}
-\author{CS444 - Spring 2017 \\ Taylor Thomas, Aravind Parasurama, Justin Brown \\Problem 1 }
+\author{CS444 - Spring 2017 \\ Taylor Thomas, Aravind Parasurama, Justin Brown}
 \maketitle
 \begin{abstract}
 
@@ -73,7 +74,45 @@
 \newpage
 
 \section{Command Log}
+\begin{enumerate}
+	\item ssh os-class
+	\item cd/scratch/spring2017/13-06
+	\item git clone git://git.yoctoproject.org/linux-yocto-3.14
+	\item cd linux-yocto-3.14
+	\item git checkout v3.14.26
+	\item source /scratch/opt/environment-setup-i586-poky-linux.csh
+	\item cp /scratch/spring2017/files/config-3.14.26-yocto-qemu.config
+	\item make menuconfig
+	\item /LOCALVERSION
+	\item 1
+	\item edit value to: -13-06-hw1 
+	\item make -j4 all
+	\item cd ..
+	\item gdb
+	\item in terminal 2: 
+	source /scratch/opt/environment-setup-i586-poky-linux.csh
+	\item cp /scratch/spring2017/files/bzImage-qemux86.bin.
+	\item /scratch/spring2017/files/core-image- lsb-sdk-qemux86.ext3 .
+	\item qemu-system- i386 -gdb tcp::5601 -S -nographic -kernel bzImage-qemux86.bin -drive file=core-image- lsb-sdk- qemux86.ext3,if=virtio -enable-kvm -net none-usb-localtime--no-reboot -- append	"root=/dev/vda rw console=ttyS0 debug"
+	\item in terminal 1: target remote :5601
+	\item continue
+	\item for username type: root
+	\item uname -a
+	\item reboot
+	\item qemu-system- i386 -gdb tcp::5601 -S -nographic -kernel linux-yocto- 3.14/arch/x86/boot/bzImage  -drive file=core-image- lsb-sdk- qemux86.ext3,if=virtio -enable- kvm -net none -usb -localtime -- no-reboot -- append	"root=/dev/vda rw console=ttyS0 debug"
+	\item target remote :5601
+	\item for username type: root
+	\item uname -a
+	\item reboot
+	\item q
+	
+\end{enumerate}
 \section{Concurrency Solution}
+The main point of the assignment is to create a program that prevents the
+producer-consumer problem from occurring. In detail there are 
 \section{Qemu Command-Line Flags}
+\section{Version Control Log}
+\section{Work Log}
+
 
 \end{document}

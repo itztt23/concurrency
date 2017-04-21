@@ -1,3 +1,5 @@
 \contentsline {section}{\numberline {1}Command Log}{2}{section.1}
 \contentsline {section}{\numberline {2}Concurrency Solution}{2}{section.2}
-\contentsline {section}{\numberline {3}Qemu Command-Line Flags}{2}{section.3}
+\contentsline {section}{\numberline {3}Qemu Command-Line Flags}{3}{section.3}
+\contentsline {section}{\numberline {4}Version Control Log}{3}{section.4}
+\contentsline {section}{\numberline {5}Work Log}{3}{section.5}
