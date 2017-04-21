@@ -38,7 +38,7 @@
     captionpos=b
 }
 
-\def\name{Taylor Thomas}
+\def\name{Taylor Thomas }
 
 %% The following metadata will show up in the PDF properties
 \hypersetup{
@@ -61,7 +61,10 @@
 \author{CS444 - Spring 2017 \\ Taylor Thomas, Aravind Parasurama, Justin Brown}
 \maketitle
 \begin{abstract}
-
+The following document contains information about the producer-consumer problem
+solution as well as the steps taken to setup the kernel for the first part of
+the assignment. Included is a version control log to show when the work was done
+through github.  
 \end{abstract}
 
 \thispagestyle{empty} % gets rid of the "0" page number.
@@ -108,8 +111,22 @@
 	
 \end{enumerate}
 \section{Concurrency Solution}
-The main point of the assignment is to create a program that prevents the
-producer-consumer problem from occurring. In detail there are 
+\subsection{What do you think the main point of the assignment was?}
+The main point of the assignment was to get more experience with thinking about
+concurrency, and thinking in the parallel programming paradigm when designing solutions.  
+\subsection{How did you personally approach the problem?}
+At first we did research to get some background information on the producer
+consumer problem. Once we had a good background of the problem we were able to
+get started implementing the solution. As far as the implementation went the main
+components consisted of the producer function, the consumer function and the
+buffer. We began to work on implementing these components one by one until the
+program converged in the end. 
+\subsection{How did you ensue your solution was correct?}
+We ensued that our solution was correct by printing the values that were
+produced by the producer and consumed by the consumer. 
+\subsection{What did you learn?}
+As a group we learned how to use pthreads at a higher level than before. This
+assignment also gave me a better understanding of parallel programming. 
 \section{Qemu Command-Line Flags}
 \begin{itemize}
 	\item -gdb tcp::5601 - Open a GDB server on TCP port 5601
@@ -126,7 +143,34 @@ producer-consumer problem from occurring. In detail there are
 	\item -- apend "root=/dev/vda rw console=ttyS0 debug" - Uses the argument as the kernel command line.
 \end{itemize}
 \section{Version Control Log}
+\begin{center}
+	\begin{tabular}{| p{0.3\linewidth} | p{0.3\linewidth} | p{0.3\linewidth} |}
+		\hline User & Commit Message & Date\\
+		\hline bitschift & added producer-consumer& April 20th\\
+		\hline bitschift & added some function prototypes& April 20th\\
+		\hline bitschift & 	Added rand num and isx86 functionsr& April 21st\\
+		\hline bitschift & 	Added 64bit rand num support& April 21st\\
+		\hline bitschift & fleshed out producer& April 21st\\
+		\hline bitschift & fleshed out consumer& April 21st\\
+		\hline bitschift & fixing bugs& April 21st\\
+		\hline bitschift & fix bugs& April 21st\\
+		\hline bitschift & more bug fixes& April 21st\\
+		\hline itztt23 & adding assignment 1 docs& April 21st\\
+		\hline itztt23 &added commands for the writeup& April 21st\\
+		\hline itztt23 & added qemu command-line flag descriptions& April 21st\\
+		\hline &&\\		
+	\end{tabular}
+\end{center}
 \section{Work Log}
-
+\begin{itemize}
+	\item April 16th - began working on the kernel part of the assignment
+	\item April 20th - began working on the producer function
+	\item April 20th - began working on the consumer function
+	\item April 20th - built the buffer
+	\item April 21st - began writing up the documents
+	\item April 21st - solved the problem of the consumer consuming empty values
+	\item April 21st - finished the write-up
+	\item April 21st - finished the concurrency assignment
+\end{itemize}
 
 \end{document}
