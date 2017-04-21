@@ -111,6 +111,20 @@
 The main point of the assignment is to create a program that prevents the
 producer-consumer problem from occurring. In detail there are 
 \section{Qemu Command-Line Flags}
+\begin{itemize}
+	\item -gdb tcp::5601 - Open a GDB server on TCP port 5601
+	\item -S - Do not start the CPU at startup.
+	\item -nographic - Disables graphical output so that QEMU is a command line operation.
+	\item -kernel linux-yocto-4.14/arch/x86/boot/bzImage - Uses this bzImage as a kernel image.
+	\item -drive file=core-image-quemux86.ext3 - Defines a new drive with the file option set.
+	\item if=virtio
+	\item -enable-kvm - Enables KVM virtualization report.
+	\item -net none - Indicates that no network devices should be configured.
+	\item -usb - Enables the USB driver.
+	\item -localtime - Gives the local time.
+	\item -- no-reboot
+	\item -- apend "root=/dev/vda rw console=ttyS0 debug" - Uses the argument as the kernel command line.
+\end{itemize}
 \section{Version Control Log}
 \section{Work Log}
 
